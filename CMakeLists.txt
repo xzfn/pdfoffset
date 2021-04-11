@@ -20,11 +20,17 @@ set(pdfoffsetcore_SOURCES
     src/pdfoffsetcore.cpp
 )
 
+# win32 resource
+set(pdfoffset_RESOURCES
+    src/pdfoffset.rc
+)
+
 # app sources
 set(pdfoffset_SOURCES
     ${pdfoffsetcore_SOURCES}
     ${pdfoffset_FLTK_UI_SRCS}
     src/pdfoffset.cpp
+    ${pdfoffset_RESOURCES}
 )
 
 # app with ui

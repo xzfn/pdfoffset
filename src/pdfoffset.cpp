@@ -12,7 +12,12 @@
 
 #include "ui.h"
 
+#ifdef WIN32
+#include <FL/x.H>
+#endif
+
 #include "pdfoffsetcore.h"
+
 
 std::string HelpString = u8R"(
 PDF打印纸质书的时候，内容常常会挤在书缝里。
@@ -72,6 +77,7 @@ public:
 	}
 
 	void setup() {
+		set_icon();
 		m_ui->m_run->callback(
 			call_proxy<PDFOffsetApp, &PDFOffsetApp::on_run>, this);
 		m_ui->m_file_chooser->callback(
@@ -250,6 +256,11 @@ private:
 		fl_message(AboutString.c_str());
 	}
 
+	void set_icon() {
+#ifdef WIN32
+		m_ui->m_window->icon(LoadIcon(fl_display, MAKEINTRESOURCE(107)));
+#endif
+	}
 private:
 	std::unique_ptr<Ui> m_ui;
 	std::future<void> m_future;
