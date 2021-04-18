@@ -33,4 +33,4 @@ The output is in the same folder as the input, with
 * QPDF: https://github.com/qpdf/qpdf
 * FLTK: https://github.com/fltk/fltk
 
-QPDF needs zlib and turbo-jpeg/libjpeg.
+QPDF needs zlib and libjpeg/libjpeg-turbo.
