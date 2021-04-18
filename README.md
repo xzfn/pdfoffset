@@ -6,7 +6,7 @@ Offset pdf pages to left and right, useful when printing a paper book.
 
 ## 功能 Basic Idea
 
-![](misc/doc.png)
+![misc/doc.png](misc/doc.png)
 
 ## 使用 Usage
 下载pdfoffset.exe，双击即可运行。
